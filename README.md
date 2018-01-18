@@ -56,7 +56,7 @@ To view the flight plan result, import the <b>litchi.csv</b> from the </b>drone<
 
 ### Default flight plan result
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![result](https://user-images.githubusercontent.com/11206290/35097764-6d346d2e-fc8c-11e7-93a0-fd435da736b9.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![result 2](https://user-images.githubusercontent.com/11206290/35098286-849d7508-fc8e-11e7-9e09-31f95b10e775.png)
 
 ### Customize flight plan
 
