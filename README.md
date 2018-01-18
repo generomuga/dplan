@@ -12,6 +12,12 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![clickpoint](https://user-images.githubusercontent.com/11206290/35095296-eb475ac8-fc82-11e7-82b4-5e487dc3dba2.png) &nbsp;&nbsp;![getcoordinates](https://user-images.githubusercontent.com/11206290/35095469-88463588-fc83-11e7-8c18-3bac2fe029ac.png)
 
+### Input requirement for the drone flight plan
+
+Four corners of the field (latitude and longitude)
+
+
+
 <b> Sample source code </b> <br>
 
 from dplan import Flight <br>
