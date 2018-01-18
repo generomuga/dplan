@@ -64,5 +64,13 @@ To view the flight plan result, import the <b>litchi.csv</b> from the </b>drone<
 order = Order()
 
 #### Select point numbers in which order you prefer 
+This a sample order of points <br><br>
+
+list_order = [14,9,4,1,2,6,11,16,18,13,8,3,5,10,15,19,20,17,12,7] <br>
+order.setPointOrder(unique_coordinates, list_order)<br>
+order.start() <br>
+
+
+
 order.setPointOrder(unique_coordinates, [20,19,17,15,11,13,16,18,14,12,9,7,3,5,8,10,6,4,2,1]) <br>
 order.start() <br>
