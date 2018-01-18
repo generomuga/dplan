@@ -46,11 +46,13 @@ flight.setCorners(corner1 = (14.168092, 121.255055),
 				  corner4 = (14.167434, 121.255701))
           
 #### Set partition of x and y
-flight.setPartition(x=4, y=3)
+flight.setPartition(x=4, y=3) <br>
 unique_coordinates = fl.calculateDistance()
           
 ### Result 
 To view the flight plan result, import the <b>litchi.csv</b> from the </b>drone</b> folder to https://flylitchi.com/hub
+
+
 
 """Initiate order of points"""<br>
 order = Order() <br>
