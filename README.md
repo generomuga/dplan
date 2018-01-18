@@ -1,4 +1,4 @@
-# Drone Deploy Flight Plan
+# Drone Flight Plan Generator for FLYLITCHI
 
 <b> Sample source code </b> <br>
 
