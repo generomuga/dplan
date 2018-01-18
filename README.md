@@ -28,12 +28,15 @@ Four corners of the field (latitude and longitude)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![grid](https://user-images.githubusercontent.com/11206290/35096465-48f8539e-fc87-11e7-9337-4265b4d68343.png)
 
-<b> Sample source code </b> <br>
+### Implementation of API
+
+#### Import dplan library 
 
 from dplan import Flight <br>
 from dplan import Order <br>
 
-"""Initiate flight plan"""<br>
+#### Initialize flight 
+
 fl = Flight() <br>
 fl.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.255377), corner3=(14.167741,121.256045), corner4=(14.167442,121.255707)) <br>
 fl.setPartition(x=3, y=4) <br>
