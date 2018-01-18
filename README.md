@@ -6,6 +6,9 @@
 
 1) Go to https://flylitchi.com/hub and search for your target location.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![searchloc](https://user-images.githubusercontent.com/11206290/35094779-49996776-fc81-11e7-9fd8-58c0b42da73a.png)
+
+2) Click map to generate a point.
 
 <b> Sample source code </b> <br>
 
