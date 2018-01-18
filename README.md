@@ -16,6 +16,13 @@
 
 Four corners of the field (latitude and longitude)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corner 1 = 14.168092, 121.255055 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corner 2 = 14.168402, 121.255369 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corner 3 = 14.167741, 121.256036 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corner 4 = 14.167434, 121.255701 <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![cornersfield](https://user-images.githubusercontent.com/11206290/35095787-c8142c64-fc84-11e7-878a-c2cea96d57d5.png)
+
 
 
 <b> Sample source code </b> <br>
