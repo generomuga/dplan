@@ -28,6 +28,8 @@ Four corners of the field (latitude and longitude)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![grid](https://user-images.githubusercontent.com/11206290/35096465-48f8539e-fc87-11e7-9337-4265b4d68343.png)
 
+<b>NOTE:</b> Create <b>drone</b> folder in your root directory for the output
+
 ### Implementation of API
 
 #### Import dplan library 
@@ -45,9 +47,10 @@ flight.setCorners(corner1 = (14.168092, 121.255055),
           
 #### Set partition of x and y
 flight.setPartition(x=4, y=3)
+unique_coordinates = fl.calculateDistance()
           
 ### Result 
-unique_coordinates = fl.calculateDistance()
+To view the flight plan result, import the <b>litchi.csv</b> from the </b>drone</b> folder to https://flylitchi.com/hub
 
 """Initiate order of points"""<br>
 order = Order() <br>
