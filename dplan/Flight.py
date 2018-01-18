@@ -4,12 +4,14 @@ class Flight(object):
 		pass
 
 	def setCorners(self, **kwargs):
+		"""Set four corners of the field (latitude and longitude)"""
 		self.corner1 = kwargs['corner1']
 		self.corner2 = kwargs['corner2']
 		self.corner3 = kwargs['corner3']
 		self.corner4 = kwargs['corner4']
 
 	def setPartition(self, **kwargs):
+		"""Set x for horizontal partition and y for vertical parition"""
 		self.x_partition = kwargs['x']
 		self.y_partition = kwargs['y']
 
