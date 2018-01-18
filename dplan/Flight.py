@@ -18,9 +18,6 @@ class Flight(object):
 		self.x_partition = kwargs['x']
 		self.y_partition = kwargs['y']
 
-	def setPointOrder(self, list_order=[]):
-		self.list_order = list_order
-
 	def calculateX(self, x1, x2, k, partition):
 		k = Fraction(k, partition)
 		return ((x2 - x1) * k) + x1
@@ -38,12 +35,6 @@ class Flight(object):
 		for i in xrange(0, len(list_xy)):
 			x, y = list_xy[i]
 			file_output.write(str(x)+','+str(y)+',30,0,0.2,0,0,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0'+'\n')
-
-	def getCoordinates(self, list_xy, index):
-		for i, coordinates in enumerate(list_xy):
-			x, y = coordinates
-			if i == index-1:
-				return x, y		
 
 	def calculateDistance(self):
 		list_x = []
@@ -157,13 +148,13 @@ class Flight(object):
 	def sayCorners(self):
 		print self.corner1, self.corner2, self.corner3, self.corner4
 
-instance = Flight()
-instance.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.255377),
-					corner3=(14.167741,121.256045), corner4=(14.167442,121.255707))
+#instance = Flight()
+#instance.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.255377),
+#					corner3=(14.167741,121.256045), corner4=(14.167442,121.255707))
 
-instance.setPartition(x=3, y=4)
+#instance.setPartition(x=3, y=4)
 #instance.sayCorners()
 #instance.setPointOrder([1,2,3,4])
-print instance.calculateDistance()
+#print instance.calculateDistance()
 
 
