@@ -18,6 +18,9 @@ class Flight(object):
 		self.x_partition = kwargs['x']
 		self.y_partition = kwargs['y']
 
+	def setPointOrder(self, list_order=[]):
+		self.list_order = list_order
+
 	def calculateX(self, x1, x2, k, partition):
 		k = Fraction(k, partition)
 		return ((x2 - x1) * k) + x1
@@ -28,6 +31,20 @@ class Flight(object):
 
 	def getUniqueCoordinates(self, list_xy):
 		return np.unique(list_xy, axis=0)
+
+	def saveCsv(self, list_xy, filename):
+		file_output = open('drone/'+filename,'w')
+		file_output.write('latitude,longitude,altitude(m),heading(deg),curvesize(m),rotationdir,gimbalmode,gimbalpitchangle,actiontype1,actionparam1,actiontype2,actionparam2,actiontype3,actionparam3,actiontype4,actionparam4,actiontype5,actionparam5,actiontype6,actionparam6,actiontype7,actionparam7,actiontype8,actionparam8,actiontype9,actionparam9,actiontype10,actionparam10,actiontype11,actionparam11,actiontype12,actionparam12,actiontype13,actionparam13,actiontype14,actionparam14,actiontype15,actionparam15'+'\n')
+		for i in xrange(0, len(list_xy)):
+			x, y = list_xy[i]
+			file_output.write(str(x)+','+str(y)+',30,0,0.2,0,0,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0'+'\n')
+			print x, y
+
+	def getCoordinates(self, list_xy, index):
+		for i, coordinates in enumerate(list_xy):
+			x, y = coordinates
+			if i == index-1:
+				return x, y		
 
 	def calculateDistance(self):
 		list_x = []
@@ -126,7 +143,17 @@ class Flight(object):
 				list_y.append(y)
 				list_xy.append(tuple((x, y)))
 
-		print self.getUniqueCoordinates(list_xy)
+		unique_coordinates = self.getUniqueCoordinates(list_xy)
+		self.saveCsv(unique_coordinates, 'litchi.csv')
+
+		if len(self.list_order) > 0:
+			list_arrange = []
+			for i, order in enumerate(self.list_order):
+				x, y = self.getCoordinates(unique_coordinates, order)
+				list_arrange.append(tuple((x, y)))
+
+			self.saveCsv(list_arrange, 'litchi_order.csv')
+	
 
 	def sayCorners(self):
 		print self.corner1, self.corner2, self.corner3, self.corner4
@@ -137,5 +164,7 @@ instance.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.25537
 
 instance.setPartition(x=3, y=4)
 instance.sayCorners()
+instance.setPointOrder([1,2,3,4])
 instance.calculateDistance()
+
 
