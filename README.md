@@ -2,7 +2,7 @@
 
 ### Website: https://flylitchi.com/hub <br>
 
-### How to get the coordinates of the field 
+### How to get the coordinates of the field?
 
 1) Go to https://flylitchi.com/hub and search for your target location.
 
