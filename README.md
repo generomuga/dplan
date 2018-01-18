@@ -1,5 +1,9 @@
 # Drone Flight Plan Generator for FLYLITCHI
 
+### Prerequisites
+Python 2.7 <br>
+Numpy 1.14.0
+
 ### Website: https://flylitchi.com/hub <br>
 
 ### How to get the coordinates of the field?
