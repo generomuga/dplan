@@ -1,6 +1,11 @@
 # Drone Flight Plan Generator for FLYLITCHI
 
-Website: https://flylitchi.com/hub <br>
+### Website: https://flylitchi.com/hub <br>
+
+### How to implement the api
+
+1) Get the coordinates from flylitchi website
+
 
 <b> Sample source code </b> <br>
 
