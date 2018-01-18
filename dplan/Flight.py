@@ -38,7 +38,6 @@ class Flight(object):
 		for i in xrange(0, len(list_xy)):
 			x, y = list_xy[i]
 			file_output.write(str(x)+','+str(y)+',30,0,0.2,0,0,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0'+'\n')
-			print x, y
 
 	def getCoordinates(self, list_xy, index):
 		for i, coordinates in enumerate(list_xy):
@@ -146,15 +145,15 @@ class Flight(object):
 		unique_coordinates = self.getUniqueCoordinates(list_xy)
 		self.saveCsv(unique_coordinates, 'litchi.csv')
 
-		if len(self.list_order) > 0:
+		return unique_coordinates
+		"""if len(self.list_order) > 0:
 			list_arrange = []
 			for i, order in enumerate(self.list_order):
 				x, y = self.getCoordinates(unique_coordinates, order)
 				list_arrange.append(tuple((x, y)))
 
-			self.saveCsv(list_arrange, 'litchi_order.csv')
+			self.saveCsv(list_arrange, 'litchi_order.csv')"""
 	
-
 	def sayCorners(self):
 		print self.corner1, self.corner2, self.corner3, self.corner4
 
@@ -163,8 +162,8 @@ instance.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.25537
 					corner3=(14.167741,121.256045), corner4=(14.167442,121.255707))
 
 instance.setPartition(x=3, y=4)
-instance.sayCorners()
-instance.setPointOrder([1,2,3,4])
-instance.calculateDistance()
+#instance.sayCorners()
+#instance.setPointOrder([1,2,3,4])
+print instance.calculateDistance()
 
 
