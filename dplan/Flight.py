@@ -1,4 +1,5 @@
 from fractions import *
+import numpy as np
 
 class Flight(object):
 
@@ -25,6 +26,9 @@ class Flight(object):
 		k = Fraction(k, partition)
 		return ((y2 - y1) * k) + y1
 
+	def getUniqueCoordinates(self, list_xy):
+		return np.unique(list_xy, axis=0)
+
 	def calculateDistance(self):
 		list_x = []
 		list_y = []
@@ -40,12 +44,12 @@ class Flight(object):
 		"""record coordinates of corner 1"""
 		list_x.append(self.corner1[0])
 		list_y.append(self.corner1[1])
-		#list_xy.append(tuple((self.corner1[0], self.corner1[1])))
+		list_xy.append(tuple((self.corner1[0], self.corner1[1])))
 
 		"""record coordinates of corner 3"""
 		list_x.append(self.corner3[0])
 		list_y.append(self.corner3[1])
-		#list_xy.append(tuple((args[2][0], args[2][1])))
+		list_xy.append(tuple((self.corner3[0], self.corner3[1])))
 
 		for i in xrange(0, x_partition):
 			k1 = k1 + 1
@@ -55,24 +59,24 @@ class Flight(object):
 			y = self.calculateX(self.corner1[1], self.corner2[1], k1, x_partition)
 			list_x.insert(k1,x)
 			list_y.insert(k1,y)
-			#list_xy.insert(k1, tuple((x, y)))
+			list_xy.insert(k1, tuple((x, y)))
 
 			"""calculate equidistant between corner 3 and corner 4"""
 			x = self.calculateX(self.corner3[0], self.corner4[0], k1, x_partition)
 			y = self.calculateX(self.corner3[1], self.corner4[1], k1, x_partition)
 			list_x.append(x)
 			list_y.append(y)
-			#list_xy.append(tuple((x, y)))
+			list_xy.append(tuple((x, y)))
 
 		"""record coordinates of corner 1"""
 		list_x.append(self.corner1[0])
 		list_y.append(self.corner1[1])
-		#list_xy.append(tuple((args[0][0], args[0][1])))
+		list_xy.append(tuple((self.corner1[0], self.corner1[1])))
 
 		"""record coordinates of corner 2"""
 		list_x.append(self.corner2[0])
 		list_y.append(self.corner2[1])
-		#list_xy.append(tuple((args[1][0], args[1][1])))
+		list_xy.append(tuple((self.corner2[0], self.corner2[1])))
 
 		"""total number of elements of list x and y"""
 		sum_elements = (len(list_x)+len(list_y))/2
@@ -90,14 +94,14 @@ class Flight(object):
 			y = self.calculateX(self.corner1[1], self.corner4[1], k2, y_partition)
 			list_x.insert(index, x)
 			list_y.insert(index, y)
-			#list_xy.insert(index, tuple((x, y)))
+			list_xy.insert(index, tuple((x, y)))
 
 			"""calculate equidistant between corner 2 and corner 3"""
 			x = self.calculateX(self.corner2[0], self.corner3[0], k2, y_partition)
 			y = self.calculateX(self.corner2[1], self.corner3[1], k2, y_partition)
 			list_x.append(x)
 			list_y.append(y)
-			#list_xy.append(tuple((x, y)))
+			list_xy.append(tuple((x, y)))
 
 		"""get index of corner 1 to corner 2"""
 		index_corner1 = list_x.index(self.corner1[0])
@@ -120,7 +124,9 @@ class Flight(object):
 				y = self.calculateY(list_y[i], list_y[index_corner4-i], k3, y_partition)
 				list_x.append(x)
 				list_y.append(y)
-				#list_xy.append(tuple((x, y)))
+				list_xy.append(tuple((x, y)))
+
+		print self.getUniqueCoordinates(list_xy)
 
 	def sayCorners(self):
 		print self.corner1, self.corner2, self.corner3, self.corner4
