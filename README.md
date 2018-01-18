@@ -6,7 +6,7 @@ from dplan import Flight <br>
 from dplan import Order <br>
 
 """Initiate flight plan"""<br>
-fl = Flight() 
+fl = Flight() <br>
 fl.setCorners(corner1=(14.168087,121.255039), corner2=(14.168399,121.255377), corner3=(14.167741,121.256045), corner4=(14.167442,121.255707)) <br>
 fl.setPartition(x=3, y=4) <br>
 unique_coordinates = fl.calculateDistance()
