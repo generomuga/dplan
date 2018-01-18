@@ -2,9 +2,9 @@
 
 ### Website: https://flylitchi.com/hub <br>
 
-### How to implement the api
+### How to get the coordinates of the field 
 
-1) Get the coordinates from flylitchi website
+1) Go to https://flylitchi.com/hub and search for your target location.
 
 
 <b> Sample source code </b> <br>
