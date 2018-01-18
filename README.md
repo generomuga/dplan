@@ -52,6 +52,8 @@ unique_coordinates = fl.calculateDistance()
 ### Result 
 To view the flight plan result, import the <b>litchi.csv</b> from the </b>drone</b> folder to https://flylitchi.com/hub
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![folder](https://user-images.githubusercontent.com/11206290/35097591-bb2ac4e8-fc8b-11e7-915c-9d71b1f407c4.png) &nbsp;&nbsp;![litchi](https://user-images.githubusercontent.com/11206290/35097596-bebeb72c-fc8b-11e7-863d-545213892d8f.png)
+
 
 
 """Initiate order of points"""<br>
