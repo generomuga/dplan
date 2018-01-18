@@ -79,3 +79,5 @@ To view the customized flight plan result, import the <b>litchi_order.csv</b> fr
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![folder](https://user-images.githubusercontent.com/11206290/35097591-bb2ac4e8-fc8b-11e7-915c-9d71b1f407c4.png) &nbsp;&nbsp;![litchi_order](https://user-images.githubusercontent.com/11206290/35098558-9e553002-fc8f-11e7-98aa-1cefc6330d7b.png) &nbsp;&nbsp;![import](https://user-images.githubusercontent.com/11206290/35097669-18067946-fc8c-11e7-8b8e-940b834a310b.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![customize](https://user-images.githubusercontent.com/11206290/35098596-d3fef206-fc8f-11e7-8f5c-8e49b80d7608.png)
+
+### View test.py for your reference  
