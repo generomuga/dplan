@@ -4,6 +4,9 @@
 Python 2.7 <br>
 Numpy 1.14.0
 
+### Installation
+pip install dplan
+
 ### Website: https://flylitchi.com/hub <br>
 
 ### How to get the coordinates of the field?
