@@ -5,3 +5,4 @@ venv/
 #files
 .pyc
 .csv
+.pypirc
