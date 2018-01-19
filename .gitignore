@@ -1,6 +1,7 @@
 #folders
 drone/
 venv/
+dist/
 
 #files
 .pyc
